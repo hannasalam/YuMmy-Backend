@@ -1,8 +1,8 @@
 const User = require('../models/User');
 
 module.exports = function(app){
-
-    app.post("/login", async (req, res) => {
+ 
+  app.post("/login", async (req, res) => {
         const { name, password } = req.body;
         let user = await User.findOne({ name });
         console.log(user);
@@ -43,6 +43,5 @@ module.exports = function(app){
         }
       }
 })
-
 
 };

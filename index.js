@@ -7,10 +7,10 @@ var cartController= require('./controllers/cartController');
 dotenv.config(); 
 
     mongoose.connect(
-    'mongodb+srv://hanna:testpassword@cluster0.3syft.mongodb.net/myFirstDatabase?retryWrites=true&w=majority', {
-        useNewUrlParser: true,
-        useUnifiedTopology: true, 
-      });
+    'mongodb+srv://hanna:testpassword@cluster0.3syft.mongodb.net/trial2?retryWrites=true&w=majority', {
+      useNewUrlParser: true,
+      useUnifiedTopology: true
+  }).then(() => console.log("Database connected!"))
 
 app.use(express.json());
 // app.use('/uploads', express.static('uploads'));
